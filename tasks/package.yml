@@ -1,0 +1,21 @@
+---
+
+- name: Install specific postfix packages
+  apt:
+    pkg: '{{ item.name }}={{ item.version }}'
+    state: installed
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items: postfix_apt_pkgs
+  when: item.version is defined
+  notify: restart_postfix
+
+- name: Install current/latest postfix packages
+  apt:
+    pkg: '{{ item.name }}'
+    state: '{{ postfix_pkg_state }}'
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items: postfix_apt_pkgs
+  when: item.version is not defined
+  notify: restart_postfix

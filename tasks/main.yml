@@ -1,0 +1,14 @@
+---
+
+- include: package.yml
+  tags: package
+
+- include: configuration.yml
+  tags: configuration
+
+- name: start/stop nginx service
+  service:
+    name: nginx
+    state: '{{ postfix_service_state }}'
+    enabled: '{{ postfix_service_enabled }}'
+  tags: service
