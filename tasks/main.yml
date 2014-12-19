@@ -6,9 +6,9 @@
 - include: configuration.yml
   tags: configuration
 
-- name: start/stop nginx service
+- name: start/stop postfix service
   service:
-    name: nginx
+    name: postfix
     state: '{{ postfix_service_state }}'
     enabled: '{{ postfix_service_enabled }}'
   tags: service
