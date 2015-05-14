@@ -8,3 +8,12 @@
     group: root
     mode: 0644
   notify: restart_postfix
+
+- name: set /etc/mailname
+  template:
+    src: mailname.j2
+    dest: /etc/mailname
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart_postfix
