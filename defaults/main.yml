@@ -3,7 +3,7 @@
 postfix_apt_pkgs:
   - name: postfix
 postfix_pkg_state: installed
-postfix_service_state: restarted
+postfix_service_state: started
 postfix_service_enabled: yes
 postfix_main_config:
   smtpd_banner: $myhostname ESMTP $mail_name (Ubuntu)
