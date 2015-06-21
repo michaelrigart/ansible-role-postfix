@@ -1,6 +1,6 @@
 Ansible Postfix Role
 ====================
-[![Build Status](https://travis-ci.org/michaelrigart/ansible-role-postfix.svg?branch=master)](https://travis-ci.org/michaelrigart/ansible-role-postfix)
+[![Build Status](https://semaphoreci.com/api/v1/projects/6c6ec20f-3ea1-4023-8111-468764043b33/461770/badge.svg)](https://semaphoreci.com/michaelrigart/ansible-role-postfix) [![Build Status](https://travis-ci.org/michaelrigart/ansible-role-postfix.svg?branch=master)](https://travis-ci.org/michaelrigart/ansible-role-postfix)
 
 An ansible role for installing and configuring Postfix.
 
