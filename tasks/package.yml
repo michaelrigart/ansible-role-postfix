@@ -1,5 +1,18 @@
 ---
 
+- name: Remove exim package
+  apt:
+    name: "{{item}}"
+    state: absent
+    purge: yes
+    force: yes
+  with_items:
+    - exim4
+    - exim4-base
+    - exim4-config
+    - exim4-daemon-light
+  when: postfix_remove_exim
+
 - name: Install specific postfix packages
   apt:
     pkg: '{{ item.name }}={{ item.version }}'
