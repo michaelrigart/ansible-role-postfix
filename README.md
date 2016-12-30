@@ -1,6 +1,5 @@
 Ansible Postfix Role
 ====================
-[![Build Status](https://semaphoreci.com/api/v1/projects/6c6ec20f-3ea1-4023-8111-468764043b33/461770/badge.svg)](https://semaphoreci.com/michaelrigart/ansible-role-postfix)
 
 An ansible role for installing and configuring Postfix.
 
@@ -23,7 +22,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - { role: MichaelRigart.postfix, sudo: Yes }
+     - { role: MichaelRigart.postfix, become: true }
 ```
 
 License
