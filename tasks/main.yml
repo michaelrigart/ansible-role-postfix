@@ -1,14 +1,14 @@
 ---
 
 - include: package.yml
-  tags: package
+  tags: [postfix, package]
 
 - include: configuration.yml
-  tags: configuration
+  tags: [postfix, configuration]
 
 - name: start/stop postfix service
   service:
     name: postfix
     state: '{{ postfix_service_state }}'
     enabled: '{{ postfix_service_enabled }}'
-  tags: service
+  tags: [postfix, service]
